@@ -40,7 +40,7 @@ namespace TN01_WFCadastrar
             p1.nomecompleto = txt_nomecompleto.Text;
             p1.dddtelefone = mkd_telefone.Text;
             p1.datanascimento = dtp_datanascimento.Value;
-            p1.escolaridade = cbx_escolaridade.SelectedText;
+            p1.escolaridade = cbx_escolaridade.SelectedItem!.ToString();
             p1.rendamensal = Convert.ToDouble(nup_rendamensal.Value);
 
             if (rdb_masculino.Checked)

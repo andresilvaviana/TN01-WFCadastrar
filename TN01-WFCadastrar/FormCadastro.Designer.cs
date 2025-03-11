@@ -52,7 +52,7 @@
             // lbl_nomecompleto
             // 
             lbl_nomecompleto.AutoSize = true;
-            lbl_nomecompleto.Location = new Point(24, 38);
+            lbl_nomecompleto.Location = new Point(23, 33);
             lbl_nomecompleto.Name = "lbl_nomecompleto";
             lbl_nomecompleto.Size = new Size(96, 15);
             lbl_nomecompleto.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             // txt_nomecompleto
             // 
-            txt_nomecompleto.Location = new Point(24, 56);
+            txt_nomecompleto.Location = new Point(23, 51);
             txt_nomecompleto.Name = "txt_nomecompleto";
             txt_nomecompleto.Size = new Size(354, 23);
             txt_nomecompleto.TabIndex = 1;
@@ -68,7 +68,7 @@
             // lbl_telefone
             // 
             lbl_telefone.AutoSize = true;
-            lbl_telefone.Location = new Point(24, 118);
+            lbl_telefone.Location = new Point(23, 113);
             lbl_telefone.Name = "lbl_telefone";
             lbl_telefone.Size = new Size(51, 15);
             lbl_telefone.TabIndex = 2;
@@ -77,7 +77,7 @@
             // mkd_telefone
             // 
             mkd_telefone.ImeMode = ImeMode.On;
-            mkd_telefone.Location = new Point(24, 136);
+            mkd_telefone.Location = new Point(23, 131);
             mkd_telefone.Mask = "(00) 90000-0000";
             mkd_telefone.Name = "mkd_telefone";
             mkd_telefone.Size = new Size(208, 23);
@@ -86,7 +86,7 @@
             // lbl_datadenascimento
             // 
             lbl_datadenascimento.AutoSize = true;
-            lbl_datadenascimento.Location = new Point(246, 118);
+            lbl_datadenascimento.Location = new Point(245, 113);
             lbl_datadenascimento.Name = "lbl_datadenascimento";
             lbl_datadenascimento.Size = new Size(114, 15);
             lbl_datadenascimento.TabIndex = 4;
@@ -95,7 +95,7 @@
             // dtp_datanascimento
             // 
             dtp_datanascimento.Format = DateTimePickerFormat.Short;
-            dtp_datanascimento.Location = new Point(246, 136);
+            dtp_datanascimento.Location = new Point(245, 131);
             dtp_datanascimento.Name = "dtp_datanascimento";
             dtp_datanascimento.Size = new Size(132, 23);
             dtp_datanascimento.TabIndex = 3;
@@ -104,7 +104,7 @@
             // lbl_escolaridade
             // 
             lbl_escolaridade.AutoSize = true;
-            lbl_escolaridade.Location = new Point(24, 209);
+            lbl_escolaridade.Location = new Point(23, 204);
             lbl_escolaridade.Name = "lbl_escolaridade";
             lbl_escolaridade.Size = new Size(73, 15);
             lbl_escolaridade.TabIndex = 7;
@@ -115,7 +115,7 @@
             cbx_escolaridade.DropDownStyle = ComboBoxStyle.DropDownList;
             cbx_escolaridade.FormattingEnabled = true;
             cbx_escolaridade.Items.AddRange(new object[] { "Analfabeto", "Ensino Fundamento Incompleto", "Ensino Fundamento Completo", "Ensino Medio Incompleto", "Ensino Medio Completo", "Ensino Tecnico Incompleto", "Ensino Tecnico Completp", "Ensino Superio Incompleto", "Ensino Superio Completo", "Pós-Graduação Incompleto", "Pós-Graduação Completo" });
-            cbx_escolaridade.Location = new Point(24, 227);
+            cbx_escolaridade.Location = new Point(23, 222);
             cbx_escolaridade.Name = "cbx_escolaridade";
             cbx_escolaridade.Size = new Size(208, 23);
             cbx_escolaridade.TabIndex = 4;
@@ -125,9 +125,9 @@
             gbx_sexo.Controls.Add(rdb_naoinformado);
             gbx_sexo.Controls.Add(rdb_feminino);
             gbx_sexo.Controls.Add(rdb_masculino);
-            gbx_sexo.Location = new Point(32, 290);
+            gbx_sexo.Location = new Point(23, 285);
             gbx_sexo.Name = "gbx_sexo";
-            gbx_sexo.Size = new Size(200, 100);
+            gbx_sexo.Size = new Size(208, 100);
             gbx_sexo.TabIndex = 5;
             gbx_sexo.TabStop = false;
             gbx_sexo.Text = "Sexo";
@@ -168,7 +168,7 @@
             // lbl_rendamensal
             // 
             lbl_rendamensal.AutoSize = true;
-            lbl_rendamensal.Location = new Point(258, 189);
+            lbl_rendamensal.Location = new Point(245, 204);
             lbl_rendamensal.Name = "lbl_rendamensal";
             lbl_rendamensal.Size = new Size(81, 15);
             lbl_rendamensal.TabIndex = 10;
@@ -177,10 +177,10 @@
             // nup_rendamensal
             // 
             nup_rendamensal.DecimalPlaces = 2;
-            nup_rendamensal.Location = new Point(258, 207);
+            nup_rendamensal.Location = new Point(245, 222);
             nup_rendamensal.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
             nup_rendamensal.Name = "nup_rendamensal";
-            nup_rendamensal.Size = new Size(120, 23);
+            nup_rendamensal.Size = new Size(132, 23);
             nup_rendamensal.TabIndex = 6;
             // 
             // chk_possuifilhos
@@ -188,7 +188,7 @@
             chk_possuifilhos.AutoSize = true;
             chk_possuifilhos.Checked = true;
             chk_possuifilhos.CheckState = CheckState.Indeterminate;
-            chk_possuifilhos.Location = new Point(258, 260);
+            chk_possuifilhos.Location = new Point(257, 285);
             chk_possuifilhos.Name = "chk_possuifilhos";
             chk_possuifilhos.Size = new Size(99, 19);
             chk_possuifilhos.TabIndex = 7;
@@ -198,7 +198,7 @@
             // btn_salvar
             // 
             btn_salvar.Image = (Image)resources.GetObject("btn_salvar.Image");
-            btn_salvar.Location = new Point(258, 339);
+            btn_salvar.Location = new Point(257, 334);
             btn_salvar.Name = "btn_salvar";
             btn_salvar.Size = new Size(120, 42);
             btn_salvar.TabIndex = 6;
