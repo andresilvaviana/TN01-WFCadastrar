@@ -17,7 +17,18 @@ namespace TN01_WFCadastrar
             InitializeComponent();
             cbx_escolaridade.SelectedIndex = 0;
         }
-
+        public void LimparFormulario()
+        {
+            txt_nomecompleto.Clear();
+            mkd_telefone.Clear();
+            dtp_datanascimento.Value = DateTime.Now;
+            cbx_escolaridade.SelectedIndex = 0;
+            rdb_feminino.Checked = false;
+            rdb_masculino.Checked = false;
+            rdb_masculino.Checked = false;
+            nup_rendamensal.Value = 0;
+            chk_possuifilhos.Checked = false;
+        }
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -69,6 +80,8 @@ namespace TN01_WFCadastrar
 
             MessageBox.Show("Cadastro realizado com Sucesso!", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            LimparFormulario();
         }
     }
 }
