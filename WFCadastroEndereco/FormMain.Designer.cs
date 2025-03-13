@@ -46,9 +46,12 @@
             // 
             // mnscadastrar
             // 
+            mnscadastrar.Checked = true;
+            mnscadastrar.CheckState = CheckState.Checked;
             mnscadastrar.Name = "mnscadastrar";
             mnscadastrar.Size = new Size(65, 20);
             mnscadastrar.Text = "Cadastra";
+            mnscadastrar.Click += mnscadastrar_Click;
             // 
             // mnssobre
             // 
@@ -66,7 +69,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 461);
+            ClientSize = new Size(484, 402);
             Controls.Add(menuStrip1);
             Name = "FormMain";
             Text = "Form1";

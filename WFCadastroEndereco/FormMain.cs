@@ -6,5 +6,11 @@ namespace WFCadastroEndereco
         {
             InitializeComponent();
         }
+
+        private void mnscadastrar_Click(object sender, EventArgs e)
+        {
+            FormCadastro form = new FormCadastro();
+            form.ShowDialog();
+        }
     }
 }

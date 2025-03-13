@@ -15,92 +15,100 @@ namespace WFCadastroEndereco
         public FormCadastro()
         {
             InitializeComponent();
-            cbx_escolaridade.SelectedIndex = 0;
-        }
-        public void LimparFormulario()
-        {
-            txt_nomecompleto.Clear();
-            mkd_telefone.Clear();
-            dtp_datanascimento.Value = DateTime.Now;
-            cbx_escolaridade.SelectedIndex = 0;
-            rdb_feminino.Checked = false;
-            rdb_masculino.Checked = false;
-            rdb_masculino.Checked = false;
-            nup_rendamensal.Value = 0;
-            chk_possuifilhos.Checked = false;
-        }
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
+            cbx_uf.SelectedIndex = 0;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void alerta (string mensagem = "")
         {
-            Pessoas p1 = new Pessoas();
-            p1.nomecompleto = txt_nomecompleto.Text;
-            p1.dddtelefone = mkd_telefone.Text;
-            p1.datanascimento = dtp_datanascimento.Value;
-            p1.escolaridade = cbx_escolaridade.SelectedItem!.ToString();
-            p1.rendamensal = Convert.ToDouble(nup_rendamensal.Value);
-
-            if (rdb_masculino.Checked)
-            {
-                p1.sexo = 'm';
-            }
-            else if (rdb_feminino.Checked)
-            {
-                p1.sexo = 'f';
-            }
-            else if (rdb_naoinformado.Checked)
-            {
-                p1.sexo = 'n';
-            }
-            else
-            {
-                MessageBox.Show("Sexo não definido!");
-                return;
-            }
-
-            if (chk_possuifilhos.CheckState == CheckState.Checked)
-            {
-                p1.possuifilhos = true;
-            }
-            else if (chk_possuifilhos.CheckState == CheckState.Unchecked)
-            {
-                p1.possuifilhos = false;
-            }
-            else
-
-            {
-                MessageBox.Show("Filhos não informado!");
-                return;
-            }
-
-            Pessoas.listaPessoas.Add(p1);
-
-            MessageBox.Show("Cadastro realizado com Sucesso!", "Info",
+            MessageBox.Show(mensagem, "Alerta",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        public void erro (string mensagem = "")
+        {
+            MessageBox.Show(mensagem, "Erro",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public void sucesso (string mensagem = "")
+        {
+            MessageBox.Show(mensagem, "Sucesso",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            LimparFormulario();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void ckb_semnumero_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (chk_semnumero.Checked == true)
+            {
+                txt_numero.Enabled = false;
+            }
+            else
+            {
+                txt_numero.Enabled = true;
+            }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btn_salva_Click(object sender, EventArgs e)
         {
 
-        }
+            if (string.IsNullOrEmpty(txt_nomecompleto.Text))
+            {
+                erro("Campo Nome vazio");
+                return;
+            }
+            
+            if (string.IsNullOrEmpty(mtb_cep.Text))
+            {
+                erro("Campo CEP Vazio");
+                return;
+            }
+            if (string.IsNullOrEmpty(txt_logradouro.Text))
+            {
+                erro("Campo Logradouro Vazio");
+                txt_logradouro.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(txt_numero.Text) && chk_semnumero.Checked == false)
+            {
+                erro("Campo Numero Vazio");
+                return;
+            }
+            if (string.IsNullOrEmpty(txt_bairro.Text))
+            {
+                erro("Campo Bairro Vazio");
+                return;
+            }
+            if (string.IsNullOrEmpty(txt_cidade.Text))
+            {
+                erro("Campo Cidade Vazio");
+                return;
+            }
+            if (string.IsNullOrEmpty(cbx_uf.SelectedItem?.ToString()))
+            {
+                erro("Campo Estado Vazio");
+                return;
+            }
+            
+            Endereco end = new Endereco();
+            end.nome = txt_nomecompleto.Text;
+            end.Cep = mtb_cep.Text;
+            end.logadouro = txt_logradouro.Text;
+            end.numero = chk_semnumero.Checked ? "S/N": txt_numero.Text;
+            end.complemento = txt_complemento.Text;
+            end.bairro = txt_bairro.Text;
+            end.cidade = txt_cidade.Text;
+            end.uf = cbx_uf.SelectedItem?.ToString();
+            end.semnumero = chk_semnumero.Checked;
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+            string mensagem = @$"
+            Nome: {end.nome}
+            Logradouro: {end.logadouro}
+            Número: {end.numero}
+            Bairro: {end.bairro}
+            Cidade: {end.cidade}
+            Estado: {end.uf}
+            CEP: {end.Cep}
+            Complemento: {end.complemento}";
 
-        }
-
-        private void FormCadastro_Load(object sender, EventArgs e)
-        {
+            sucesso(mensagem);
 
         }
     }
