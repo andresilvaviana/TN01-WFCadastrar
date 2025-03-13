@@ -90,7 +90,7 @@
             mtb_cep.Mask = "00000-999";
             mtb_cep.Name = "mtb_cep";
             mtb_cep.Size = new Size(96, 23);
-            mtb_cep.TabIndex = 6;
+            mtb_cep.TabIndex = 2;
             // 
             // label1
             // 
@@ -114,14 +114,14 @@
             txt_logradouro.Location = new Point(23, 172);
             txt_logradouro.Name = "txt_logradouro";
             txt_logradouro.Size = new Size(155, 23);
-            txt_logradouro.TabIndex = 9;
+            txt_logradouro.TabIndex = 3;
             // 
             // txt_numero
             // 
             txt_numero.Location = new Point(184, 172);
             txt_numero.Name = "txt_numero";
             txt_numero.Size = new Size(94, 23);
-            txt_numero.TabIndex = 10;
+            txt_numero.TabIndex = 4;
             // 
             // lbl_numero
             // 
@@ -137,7 +137,7 @@
             txt_complemento.Location = new Point(23, 289);
             txt_complemento.Name = "txt_complemento";
             txt_complemento.Size = new Size(184, 23);
-            txt_complemento.TabIndex = 12;
+            txt_complemento.TabIndex = 8;
             // 
             // lbl_complemento
             // 
@@ -162,7 +162,7 @@
             txt_bairro.Location = new Point(215, 233);
             txt_bairro.Name = "txt_bairro";
             txt_bairro.Size = new Size(165, 23);
-            txt_bairro.TabIndex = 14;
+            txt_bairro.TabIndex = 7;
             // 
             // lbl_cidade
             // 
@@ -178,7 +178,7 @@
             txt_cidade.Location = new Point(23, 233);
             txt_cidade.Name = "txt_cidade";
             txt_cidade.Size = new Size(184, 23);
-            txt_cidade.TabIndex = 16;
+            txt_cidade.TabIndex = 6;
             // 
             // cbx_uf
             // 
@@ -188,7 +188,7 @@
             cbx_uf.Location = new Point(217, 289);
             cbx_uf.Name = "cbx_uf";
             cbx_uf.Size = new Size(163, 23);
-            cbx_uf.TabIndex = 18;
+            cbx_uf.TabIndex = 9;
             // 
             // lbl_uf
             // 
@@ -205,7 +205,7 @@
             chk_semnumero.Location = new Point(284, 172);
             chk_semnumero.Name = "chk_semnumero";
             chk_semnumero.Size = new Size(96, 19);
-            chk_semnumero.TabIndex = 20;
+            chk_semnumero.TabIndex = 5;
             chk_semnumero.Text = "Sem Número";
             chk_semnumero.UseVisualStyleBackColor = true;
             chk_semnumero.CheckedChanged += ckb_semnumero_CheckedChanged;
@@ -215,7 +215,7 @@
             btn_salva.Location = new Point(23, 350);
             btn_salva.Name = "btn_salva";
             btn_salva.Size = new Size(354, 35);
-            btn_salva.TabIndex = 21;
+            btn_salva.TabIndex = 10;
             btn_salva.Text = "Salva";
             btn_salva.UseVisualStyleBackColor = true;
             btn_salva.Click += btn_salva_Click;
